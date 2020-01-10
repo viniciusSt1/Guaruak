@@ -1,0 +1,28 @@
+.wrapper{
+    background: #fff!important;
+}
+
+.login-box-body{
+    background: #eee;
+}
+
+.login-box button{
+    margin-left: 0px;
+}
+
+.login-box a:hover{
+    cursor: pointer;
+}
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.gira{
+    animation:spin;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
