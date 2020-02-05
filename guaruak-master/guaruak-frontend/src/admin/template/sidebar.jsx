@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faCircle, faList, faPlus, faBook } from '@fortawesome/free-solid-svg-icons';
 
 class Sidebar extends Component{
@@ -41,8 +42,7 @@ class Sidebar extends Component{
                                 </li>
                                 <li className={this.props.location.pathname === '/admin/adicionar' ? 'active' : ''}>
                                     <Link to="/admin/adicionar">
-                                        <FontAwesomeIcon icon={faPlus} />
-                                        &nbsp; Adicionar
+                                    <span className="glyphicon glyphicon-plus"></span> Adicionar
                                     </Link>
                                 </li>
                             </ul>
