@@ -87,6 +87,7 @@ class Index extends Component{
                                                     <th>Traduzir para:</th>
                                                     <th>Tradução</th>
                                                     <th className="text-center">Áudio</th>
+                                                    <th className="text-center">Remover</th>
                                                 </tr>
                                             </thead>
                                             <tbody ref="wordsTable">
@@ -95,7 +96,7 @@ class Index extends Component{
                                                 
                                                 <If test={words.length === 0}>
                                                     <tr >
-                                                        <td align="center" colSpan="4">
+                                                        <td align="center" colSpan="5">
                                                             <b>Não há nenhuma palavra em nossa base de dados</b>
                                                         </td>
                                                     </tr>

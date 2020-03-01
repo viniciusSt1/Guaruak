@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const Word = require("../models/word");
 
 const router = express.Router();
 
@@ -56,6 +57,11 @@ router.post('/registrar', async (req, res) => {
     }
 });
 
+router.post('/delete/:id' ,(req,res) => {
+    Word.deleteOne({_id:req.params.id}).then(() =>{
+        res.redirect('http://localhost:3000/admin');
+    })
+})
 router.post('/validateToken', async (req, res) => {
 
     const authToken = req.body.token || '';

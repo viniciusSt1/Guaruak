@@ -9,6 +9,8 @@ import If from '../../utils/if';
 
 import { sumSearch } from './dictionaryAdminActions';
 
+import axios from 'axios';
+
 class DictionaryRow extends Component{
 
     constructor(props){
@@ -112,9 +114,9 @@ class DictionaryRow extends Component{
             </>
         );
     }
-
     render(){
         const { word } = this.props;
+        const rota = `http://localhost:3001/admin/delete/${word._id}`
         return(
             <If test={ this.filterLanguage() && this.filterSentence() }>
                 <tr>
@@ -127,6 +129,15 @@ class DictionaryRow extends Component{
                         <button className="btn btn-dark" onClick={() => this.playAudio() }>
                             <FontAwesomeIcon icon={faVolumeUp} />
                         </button>
+                    </td>
+                    <td align="center" width="120px">
+                        <form action={rota} method="post">
+                            <input type="hidden" name="id" value={word._id}/>
+                            <button type="submit" className="btn btn-danger">
+                            Remover <span className="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </form>
+                        
                     </td>
                 </tr>
             </If>

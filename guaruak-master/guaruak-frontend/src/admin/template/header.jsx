@@ -12,7 +12,7 @@ class Header extends Component {
     render(){
         return (
             <header className="main-header">
-                <a href="/#" className="logo">
+                <a href="/" className="logo">
                     <span className="logo-mini"><b>Gua</b></span>
                     <span className="logo-lg"><b>Gua</b>ruak</span>
                 </a>
